@@ -3,9 +3,7 @@
 **Tagline:** *An End-to-End Analysis to Uncover Learning Trends, Predict Course Success, and Drive Business Strategy on the Udemy Platform.*
 
 <!-- Make sure to replace this link with the public link to your dashboard image -->
-![Dashboard Overview](https://github.com/user-attachments/assets/7bf30832-604a-4712-a7d1-e62a0c8d1959)
-*Business Overview Dashboard - [View the Full Interactive Dashboard on Tableau Public](https://public.tableau.com/views/UdemyAnalysisDashboard_17433362503760/DashboardLearningTrendsBehaviorAnalysis?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)*
-
+![Udemy Analysis Dashboard[](https://github.com/user-attachments/assets/7bf30832-604a-4712-a7d1-e62a0c8d1959](https://public.tableau.com/views/UdemyAnalysisDashboard_17433362503760/DashboardOverview?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link))
 ---
 
 ## 1. Project Overview
@@ -103,3 +101,4 @@ The GMM algorithm successfully segmented courses into 6 meaningful clusters. The
 *   **The "Hot-Ticket" Cluster:** Courses with massive enrollments and high ratings, often centered on trending topics. However, their engagement rates are low, suggesting students enroll due to hype but may not complete or interact deeply with the content.
 *   **The "Niche & Unproven" Cluster:** New or niche courses with low enrollments and poor ratings. They are typically short but have a high price point, indicating a struggle to find product-market fit.
 *   **The "Elite Performer" Cluster:** A tiny, exclusive group of courses (only 11) with outstanding performance: an average of **1.2 million students per course** and near-perfect ratings (4.5-4.7). These are the platform's "blockbusters"—long, expensive, and highly engaging.
+
