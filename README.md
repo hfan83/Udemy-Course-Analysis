@@ -1,104 +1,131 @@
-# Udemy IT Courses Analysis: Trends & Performance
+Udemy IT Courses Data Analysis: Trends & Performance
+Tagline: An end-to-end project to uncover learning trends, build predictive models, and propose data-driven business strategies for IT courses on the Udemy platform.
 
-**Tagline:** *An End-to-End Analysis to Uncover Learning Trends, Predict Course Success, and Drive Business Strategy on the Udemy Platform.*
 
-<!-- Make sure to replace this link with the public link to your dashboard image -->
-![Udemy Analysis Dashboard[](https://github.com/user-attachments/assets/7bf30832-604a-4712-a7d1-e62a0c8d1959](https://public.tableau.com/views/UdemyAnalysisDashboard_17433362503760/DashboardOverview?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link))
----
+Business Overview Dashboard — View full interactive dashboard on Tableau Public
 
-## 1. Project Overview
+1. Project Overview
+This project delivers a complete data analytics and machine learning pipeline, moving from raw data collection to business-focused insights and strategic recommendations. The main objective is to analyze the Information Technology (IT) course market on Udemy, uncovering actionable insights that can guide decision-making and competitive strategies.
 
-This project presents an end-to-end data analysis workflow, from data scraping and preprocessing to machine learning modeling and interactive visualization. The primary goal is to gain deep insights into the Information Technology (IT) course market on the Udemy platform.
+🚀 Business Goals
+Learning Trends: What IT topics, languages, and course structures are most popular?
 
-Beyond simple analysis, this project focuses on extracting **actionable insights** and providing **data-driven recommendations** to optimize course performance, enhance user engagement, and improve Udemy's competitive edge.
+User Behavior: How do price, duration, level, and instructor reputation influence enrollment and engagement?
 
-### 📌 Business Problem
+Course Performance: What drives enrollments, and can we predict them for new courses?
 
-This project aims to answer core business questions:
-*   **Learning Trends:** What are the most popular topics, languages, and course formats currently attracting students in the IT field?
-*   **User Behavior:** Which factors (price, duration, level, instructor reputation) most significantly influence a student's enrollment decision and satisfaction?
-*   **Course Performance:** What defines a successful course? Can we predict the potential number of enrollments for a new course?
-*   **Strategic Optimization:** How can we leverage data to formulate strategies that boost revenue, increase engagement, and effectively develop different course segments?
+Strategic Optimization: Based on these insights, how can Udemy improve revenues and grow its IT course segment?
 
-### 💾 The Data
-The dataset was collected via web scraping from `Udemy.com` in March 2025. It contains information on **over 24,000 IT courses**, described by 18 attributes, including:
-*   **Course Information:** Title, category, level, duration, price, number of lectures, language, etc.
-*   **Performance Metrics:** Total enrollments, average rating, number of ratings, etc.
-*   **Instructor Details:** Name, total courses, total students, average rating, etc.
+💾 Data
+The dataset was scraped from Udemy.com in March 2025, including over 24,000 IT courses described by:
 
-### 🛠️ Tech Stack & Tools
+Course features: Title, category, level, duration, price, lectures, language.
 
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
-![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)
-![Scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
-![XGBoost](https://img.shields.io/badge/XGBoost-0066B0?style=for-the-badge&logo=xgboost&logoColor=white)
-![LightGBM](https://img.shields.io/badge/LightGBM-A6569A?style=for-the-badge)
-![Matplotlib](https://img.shields.io/badge/Matplotlib-11557c?style=for-the-badge&logo=Matplotlib&logoColor=white)
-![Seaborn](https://img.shields.io/badge/Seaborn-3776AB?style=for-the-badge&logo=seaborn&logoColor=white)
-![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=Jupyter&logoColor=white)
-![Tableau](https://img.shields.io/badge/Tableau-E97627?style=for-the-badge&logo=tableau&logoColor=white)
+Performance metrics: Total enrollments, ratings, reviews.
 
----
+Instructor stats: Number of courses, total students, total reviews.
 
-## 2. Project Workflow
-This project follows a systematic data analysis pipeline:
+2. Project Workflow
+🛠 Tech Stack & Libraries
 
-1.  **Data Collection & Preprocessing:**
-    *   Cleaned the data by handling missing values, duplicates, and special characters.
-    *   Performed data type conversions for consistency.
-    *   Modeled the data into a relational schema (Course, Instructor, Language, etc.).
-    *   Applied **Logarithmic Transformation** to normalize skewed numerical features.
 
-2.  **Exploratory Data Analysis (EDA):**
-    *   Utilized descriptive statistics and visualizations (Histograms, Boxplots, Heatmaps) to understand data distributions and correlations.
-    *   Analyzed key factors like price, duration, and level to generate initial insights.
 
-3.  **Interactive Dashboard Development:**
-    *   Built two interactive dashboards in **Tableau** to:
-        *   Provide a high-level overview of business performance (revenue, enrollments, market size).
-        *   Conduct a deep-dive analysis of student behavior and learning trends.
 
-4.  **Predictive Modeling (Regression):**
-    *   **Objective:** To predict the total number of enrollments (`Total Enrollments`).
-    *   **Feature Engineering:**
-        *   Used **PCA (Principal Component Analysis)** to reduce dimensionality and address multicollinearity among course structure features.
-        *   Applied **Hybrid Sampling (SMOTE + Random Undersampling)** to handle class imbalance in the categorical price feature.
-    *   **Modeling:**
-        *   Trained and compared three models: `Linear Regression`, `LightGBM`, and `XGBoost`.
-        *   Implemented **Early Stopping** to prevent overfitting.
-    *   **Evaluation:** Assessed models using `R-squared`, `MAE`, and `RMSLE` metrics.
 
-5.  **Clustering Model (Unsupervised Learning):**
-    *   **Objective:** To segment courses into distinct groups based on popularity and quality.
-    *   **Methodology:**
-        *   Used the **Empirical Rule** to separate the data into "Common" and "Special" (outlier) datasets for more robust clustering.
-        *   Implemented the **Gaussian Mixture Model (GMM)** algorithm, chosen for its flexibility in handling clusters of varying shapes and sizes.
-        *   Used **AIC/BIC** criteria and the **Silhouette Score** to determine the optimal number of clusters and evaluate clustering quality.
 
-6.  **Insight Synthesis & Strategic Recommendations:**
-    *   Synthesized findings from EDA, dashboards, and models to formulate actionable business strategies.
 
----
 
-## 3. Key Findings & Insights
 
-### 📊 Insights from the Dashboard
-1.  **Premium Content Commands Premium Prices:** High-priced (> $40) and long-duration (> 24 hours) courses, despite fewer enrollments, generate the **highest revenue**. This indicates a willingness from students to pay for comprehensive, in-depth content.
-2.  **The Mid-Price Segment Underperforms:** Courses in the mid-price range ($20 - $40) consistently show the poorest performance across all metrics.
-3.  **"All Levels" is King:** Courses marketed for "All Levels" dominate in volume, enrollments, and revenue, highlighting a strong demand for accessible and flexible learning paths.
-4.  **Engagement is a Challenge:** The platform-wide average rating rate is low (9.6%). Low-cost, short-duration courses suffer from extremely low engagement (3-4%), suggesting a lack of student commitment.
-5.  **Niche Stars with High Engagement:** Topics like **Software Testing** and **Development Tools**, while smaller in scale, boast exceptionally high rating and engagement rates, indicating a highly active community and quality content.
+🔎 Data Processing & Feature Engineering
+Removed duplicates, standardized data types, cleaned special characters.
 
-### 🤖 Insights from Machine Learning Models
+Applied Log Transformation to nearly all numeric features (except ratings) to handle extreme skewness.
 
-#### Predictive Model
-*   The **XGBoost** model performed best, achieving an **R-squared of 80.62%** on the test set, demonstrating a strong ability to explain and predict student enrollments.
-*   The most important feature influencing enrollments is **`Total Ratings`**. This confirms that the **social proof effect** is a critical driver for attracting new students.
+Used Frequency Encoding on Language, OneHot Encoding on Level and Mini_Subject_Name.
 
-#### Clustering Model
-The GMM algorithm successfully segmented courses into 6 meaningful clusters. The most notable are:
-*   **The "Hot-Ticket" Cluster:** Courses with massive enrollments and high ratings, often centered on trending topics. However, their engagement rates are low, suggesting students enroll due to hype but may not complete or interact deeply with the content.
-*   **The "Niche & Unproven" Cluster:** New or niche courses with low enrollments and poor ratings. They are typically short but have a high price point, indicating a struggle to find product-market fit.
-*   **The "Elite Performer" Cluster:** A tiny, exclusive group of courses (only 11) with outstanding performance: an average of **1.2 million students per course** and near-perfect ratings (4.5-4.7). These are the platform's "blockbusters"—long, expensive, and highly engaging.
+Applied PCA (Principal Component Analysis) on structured course features (Duration, Lectures, Sections) and instructor features (Instructor Reviews, Instructor Students), capturing ~95% variance.
 
+📊 Exploratory Data Analysis (EDA)
+Analyzed distributions and correlations to understand market dynamics.
+
+Identified how price, duration, and level affect enrollments and revenue.
+
+📈 Predictive Modeling
+Objective: Predict Total Enrollments as a regression problem.
+
+Compared three models using K-Fold Cross Validation:
+
+Linear Regression
+
+LightGBM
+
+XGBoost
+
+Evaluated on RMSE, MAE, and R² scores.
+
+Selected the best model based on lowest RMSE, then trained on full data and extracted feature importances.
+
+🔬 Clustering
+Isolated common dataset (df_Common) by removing outliers via the Empirical Rule (mean ± 3σ).
+
+Applied Gaussian Mixture Model (GMM) with covariance='tied'.
+
+Used AIC, BIC, and Silhouette Scores to determine the optimal number of clusters.
+
+Visualized clusters with 3D scatter plots and analyzed distributions across clusters.
+
+📊 Dashboards
+Built interactive dashboards in Tableau for:
+
+Business overview: market size, total revenue, enrollments by topic & level.
+
+Behavioral deep dives: exploring student engagement and ratings by segment.
+
+3. Key Findings & Insights
+📌 Insights from EDA & Dashboards
+Premium pays off: Courses priced over $40 and longer than 24 hours have fewer enrollments but generate the highest revenue, indicating willingness to pay for depth.
+
+"All Levels" dominate: Flexible courses targeting all skill levels are the most popular in enrollments and revenue.
+
+Mid-price segment struggle: Courses priced $20-$40 underperform in both enrollments and revenue.
+
+Engagement issues: While enrollment is high for trending topics, average engagement (based on ratings rate) is under 10%, especially poor for low-cost, short courses.
+
+Hidden gems: Software Testing and Development Tools have small market shares but high engagement and satisfaction.
+
+🤖 Predictive Model Results
+The best model (example LightGBM) achieved:
+
+RMSE: ~0.32
+
+MAE: ~0.25
+
+R²: ~0.79
+
+Most important features:
+
+Total Ratings (social proof is key for attracting students)
+
+Followed by instructor popularity and course structural complexity (via PCA components).
+
+🔍 Clustering Insights
+Segmented only on the cleaned df_Common data.
+
+Identified three clear clusters:
+
+Popular but Low Engagement: High enrollments but low ratings rate, often hype-driven.
+
+Underperformers: Few enrollments and reviews, often due to poor positioning (short, overpriced).
+
+Elite Courses: Tiny segment with massive enrollments and top ratings, typically long, expensive, and instructor-backed.
+
+💡 Strategic Recommendations
+Invest in "All Levels" courses with long durations and top instructors to maximize both enrollments and willingness to pay.
+
+Leverage social proof: Promote total ratings and reviews prominently on course pages.
+
+Revamp mid-price segment: Consider repackaging or bundling to better fit demand.
+
+Spotlight hidden gems: Drive more traffic to high-engagement topics like Software Testing via targeted campaigns.
+
+Continue PCA-style feature monitoring: Regularly reduce high-dimensional data for new courses to identify structural strengths and weaknesses.
