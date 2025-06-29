@@ -2,7 +2,6 @@
 
 **Tagline:** *An end-to-end project to uncover learning trends, build predictive models, and propose data-driven business strategies for IT courses on Udemy.*
 
-![Dashboard Overview](https://public.tableau.com/static/images/Ud/UdemyAnalysisDashboard_17433362503760/DashboardOverview/1.png)
 *Business Overview Dashboard — [View the interactive dashboard on Tableau Public](https://public.tableau.com/app/profile/truonghuyphan.da/viz/UdemyAnalysisDashboard_17433362503760/DashboardOverview)*
 
 ---
